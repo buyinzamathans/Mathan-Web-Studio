@@ -1,34 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navMenu = document.querySelector('nav');
-    const toggleIcon = navToggle.querySelector('i');
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const closeMenuBtn = document.querySelector('.close-menu-btn');
+    const navMenu = document.querySelector('header nav');
 
-    // Toggle Mobile Menu open/close
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('mobile-active');
-        
-        // Dynamically swaps the hamburger bars (☰) to an "X" close icon when active
-        if (navMenu.classList.contains('mobile-active')) {
-            toggleIcon.classList.remove('fa-bars');
-            toggleIcon.classList.add('fa-xmark');
-            toggleIcon.style.color = '#e5a93c'; // Turns gold when open
-        } else {
-            toggleIcon.classList.remove('fa-xmark');
-            toggleIcon.classList.add('fa-bars');
-            toggleIcon.style.color = '#ffffff';
-        }
-    });
-
-    // Close mobile menu if a user clicks on any link inside it
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('mobile-active')) {
-                navMenu.classList.remove('mobile-active');
-                toggleIcon.classList.remove('fa-xmark');
-                toggleIcon.classList.add('fa-bars');
-                toggleIcon.style.color = '#ffffff';
-            }
+    // Function to open the menu
+    if (mobileNavToggle && navMenu) {
+        mobileNavToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.add('active');
         });
+    }
+
+    // Function to close the menu using the close button (X)
+    if (closeMenuBtn && navMenu) {
+        closeMenuBtn.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    }
+
+    // Close the menu if a user clicks anywhere outside of it
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        }
     });
 });

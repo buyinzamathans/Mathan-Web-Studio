@@ -635,3 +635,43 @@ footer {
         font-size: 2rem; /* Slighly resizes headline text for clean phone framing */
     }
 }
+/* ==========================================================================
+   JAVASCRIPT-BASED MOBILE NAVIGATION STYLES
+   ========================================================================== */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block; /* Shows the hamburger bars on mobile */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hides the menu completely off-screen by default */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--bg-card);
+        border-left: 1px solid var(--border-color);
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem !important;
+        transition: right var(--transition-speed) ease-in-out;
+        z-index: 1050;
+    }
+
+    /* This class gets added dynamically by JavaScript when clicking the button */
+    nav.mobile-active {
+        right: 0; /* Slides the menu beautifully into view */
+    }
+}
+

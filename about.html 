@@ -141,6 +141,11 @@
                 <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
             </nav>
+
+<button class="mobile-nav-toggle" aria-label="Toggle navigation">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
             <a href="contact.html" class="btn-nav">Let's Work Together</a>
         </div>
     </header>
@@ -236,5 +241,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
+

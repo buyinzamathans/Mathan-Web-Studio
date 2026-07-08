@@ -230,14 +230,16 @@ nav a:hover, nav a.active {
 
 .hero-main-img {
     width: 100%;
-    max-height: 450px;
+    max-height: 600px; /* Allows the image to stretch taller */
     border-radius: 12px;
     object-fit: cover;
+    transform: scale(1.35); /* Physically zooms the graphic out into the empty space */
     
-    /* Radial mask: Solid in the middle, fading to transparent at the edges */
-    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
-    mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    /* Widens the solid center so the fade doesn't eat up the image */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 95%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 95%);
 }
+
 
 .hero-rating-box {
     position: absolute;

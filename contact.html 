@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mathan Web Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ==========================================================================
+           CONTACT PAGE SPECIFIC STYLES
+           ========================================================================== */
+        .contact-hero {
+            padding: 6rem 2rem 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: 0 auto 6rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Left Side: Contact Info Cards */
+        .contact-info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+
+        .contact-method-card:hover {
+            transform: translateX(5px);
+            border-color: rgba(229, 169, 60, 0.4);
+        }
+
+        .contact-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(229, 169, 60, 0.1);
+            border: 1px solid rgba(229, 169, 60, 0.2);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon-wrapper i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .contact-details h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-details p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Right Side: Contact Form */
+        .contact-form-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+        }
+
+        .contact-form-container h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color var(--transition-speed) ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 868px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .contact-form-container {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-m">M</span>
+                <div class="logo-text">
+                    <span class="brand-name">MATHAN</span>
+                    <span class="brand-sub">WEB STUDIO</span>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <a href="contact.html" class="btn-nav">Let's Work Together</a>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h1>Let's Connect</h1>
+        <p class="section-desc" style="max-width: 600px; margin: 1rem auto 0 auto;">
+            Ready to bring your digital vision to life? Reach out through any channel below.
+        </p>
+    </section>
+
+    <div class="contact-wrapper">
+        
+        <div class="contact-info-panel">
+            
+            <a href="https://wa.me/256789537954" target="_blank" class="contact-method-card">
+                <div class="contact-icon-wrapper">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>WhatsApp Messenger</h3>
+                    <p>Instant Messaging & Call Support</p>
+                    <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 600; margin-top: 0.3rem; display: inline-block;">+256 789 537954 &rarr;</span>
+                </div>
+            </a>
+
+            <a href="mailto:buyinzamathan00@gmail.com" class="contact-method-card">
+                <div class="contact-icon-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Official Studio Email</h3>
+                    <p>For Proposals & Project Briefs</p>
+                    <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 600; margin-top: 0.3rem; display: inline-block;">buyinzamathan00@gmail.com &rarr;</span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send a Brief</h2>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message feature ready to integrate with script!');">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Outline / Message</label>
+                    <textarea id="message" class="form-control" placeholder="Describe your project, storefront goals, or event timeline here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    Send Project Inquiry <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="copyright">
+                &copy; 2026 Mathan Web Studio. All rights reserved.
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://wa.me/256789537954" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:buyinzamathan00@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

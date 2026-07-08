@@ -7,22 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileNavToggle && navMenu) {
         mobileNavToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            navMenu.classList.add('active');
+            navMenu.classList.add('mobile-active');
         });
     }
 
     // Function to close the menu using the close button (X)
     if (closeMenuBtn && navMenu) {
         closeMenuBtn.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+            navMenu.classList.remove('mobile-active');
         });
     }
 
     // Close the menu if a user clicks anywhere outside of it
     document.addEventListener('click', (e) => {
-        if (navMenu && navMenu.classList.contains('active')) {
+        if (navMenu && navMenu.classList.contains('mobile-active')) {
             if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
+                navMenu.classList.remove('mobile-active');
             }
         }
     });

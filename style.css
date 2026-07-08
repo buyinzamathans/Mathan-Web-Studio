@@ -636,7 +636,7 @@ footer {
     }
 }
 /* ==========================================================================
-   JAVASCRIPT-BASED MOBILE NAVIGATION STYLES
+   POLISHED MOBILE NAVIGATION STYLES
    ========================================================================== */
 .mobile-nav-toggle {
     display: none;
@@ -650,28 +650,40 @@ footer {
 
 @media (max-width: 768px) {
     .mobile-nav-toggle {
-        display: block; /* Shows the hamburger bars on mobile */
+        display: block; 
     }
 
     nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Hides the menu completely off-screen by default */
-        width: 70%;
+        right: -100%; 
+        width: 280px; /* Smaller, app-drawer feel */
         height: 100vh;
-        background-color: var(--bg-card);
+        background-color: #0e1420; /* Solid, luxury background */
         border-left: 1px solid var(--border-color);
-        flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem !important;
-        transition: right var(--transition-speed) ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px; /* Space from the top */
+        gap: 1.5rem;
+        transition: right 0.4s ease-in-out;
         z-index: 1050;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5); /* Adds depth/shadow */
     }
 
-    /* This class gets added dynamically by JavaScript when clicking the button */
+    nav a {
+        font-size: 1.25rem;
+        padding: 10px 30px;
+        color: var(--text-main);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+        color: var(--accent-gold);
+    }
+
     nav.mobile-active {
-        right: 0; /* Slides the menu beautifully into view */
+        right: 0; 
     }
 }
-

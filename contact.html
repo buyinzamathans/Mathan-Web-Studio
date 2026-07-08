@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
     <header>
         <div class="nav-container">
             <div class="logo">
@@ -20,6 +19,7 @@
                 </div>
             </div>
             <nav>
+                <button class="close-menu-btn" aria-label="Close menu">&times;</button>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
@@ -31,11 +31,10 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <a href="https://wa.me/256789537954" class="btn-nav">Let's Work Together</a>
+            <a href="https://wa.me/256789537954?text=Hello%20Mathan,%20I%20would%20like%20to%20work%20with%20you%20on%20a%20project." class="btn-nav" target="_blank">Let's Work Together</a>
         </div>
     </header>
 
-    <!-- HERO SECTION FOR CONTACT PAGE -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -52,64 +51,55 @@
         </div>
     </section>
 
-    <!-- CONTACT INFORMATION SECTION -->
     <section class="contact-section">
-        <div class="contact-container">
-            <!-- Contact Methods -->
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
+        <div class="section-container">
+            
+            <div class="contact-grid">
+                
+                <a href="https://wa.me/256789537954?text=Hello%20Mathan,%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project." class="contact-card whatsapp-card" target="_blank">
+                    <div class="contact-icon">💬</div>
                     <h3>WhatsApp</h3>
-                    <p>Quick and convenient way to reach me</p>
-                    <a href="https://wa.me/256789537954" class="contact-link">Message on WhatsApp</a>
-                </div>
+                    <p>Quick and convenient way to reach me.</p>
+                    <span class="contact-link">Message on WhatsApp</span>
+                </a>
 
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
+                <a href="mailto:buyinzamathan00@gmail.com" class="contact-card">
+                    <div class="contact-icon">✉️</div>
                     <h3>Email</h3>
-                    <p>Send me an email and I'll respond promptly</p>
-                    <a href="mailto:buyinzamathan00@gmail.com" class="contact-link">Send Email</a>
-                </div>
+                    <p>Send me an email and I'll respond promptly.</p>
+                    <span class="contact-link">Send Email</span>
+                </a>
 
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
+                <a href="tel:+256789537954" class="contact-card">
+                    <div class="contact-icon">📞</div>
                     <h3>Phone</h3>
-                    <p>Call me directly to discuss your project</p>
-                    <a href="tel:+256789537954" class="contact-link">Call Now</a>
-                </div>
+                    <p>Call me directly to discuss your project.</p>
+                    <span class="contact-link">Call Now</span>
+                </a>
             </div>
 
-            <!-- Business Hours & Info -->
-            <div class="contact-info">
-                <h2>Business Hours</h2>
-                <div class="hours">
-                    <div class="hour-item">
-                        <span>Monday - Friday:</span>
+            <div class="business-hours-box">
+                <h3>Business Hours</h3>
+                <div class="hours-grid">
+                    <div class="hour-row">
+                        <span>Monday - Friday</span>
                         <span>9:00 AM - 6:00 PM</span>
                     </div>
-                    <div class="hour-item">
-                        <span>Saturday:</span>
+                    <div class="hour-row">
+                        <span>Saturday</span>
                         <span>10:00 AM - 4:00 PM</span>
                     </div>
-                    <div class="hour-item">
-                        <span>Sunday:</span>
-                        <span>Closed</span>
+                    <div class="hour-row">
+                        <span>Sunday</span>
+                        <span class="closed">Closed</span>
                     </div>
                 </div>
-
-                <h3>Response Time</h3>
-                <p>I typically respond to inquiries within 24 hours. For urgent matters, please reach out via WhatsApp or phone.</p>
+                <p class="response-time"><strong>Response Time:</strong> I typically respond to inquiries within 24 hours. For urgent matters, please reach out via WhatsApp.</p>
             </div>
+
         </div>
     </section>
 
-    <!-- CALL TO ACTION SECTION -->
     <section class="cta-section">
         <div class="cta-box">
             <p class="cta-tag">LET'S BUILD TOGETHER</p>
@@ -117,7 +107,7 @@
             <p class="cta-desc">Choose your preferred way to reach out and let's start creating your next project.</p>
             
             <div class="cta-buttons">
-                <a href="https://wa.me/256789537954" class="btn-whatsapp">
+                <a href="https://wa.me/256789537954?text=Hello%20Mathan,%20let's%20get%20started%20on%20a%20new%20web%20project." class="btn-whatsapp" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> Contact Me on WhatsApp
                 </a>
                 <a href="mailto:buyinzamathan00@gmail.com" class="btn-email">
@@ -127,7 +117,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <p class="copyright">&copy; 2026 Mathan Web Studio. All rights reserved.</p>
@@ -142,11 +131,4 @@
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://wa.me/256789537954"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <a href="https://wa.me/256789537954?text=
